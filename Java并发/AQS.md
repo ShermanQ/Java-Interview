@@ -172,7 +172,7 @@ private final boolean compareAndSetTail(Node expect, Node update) {
 这里会涉及到两个变化
 
 - 新的线程封装成Node节点追加到同步队列中，设置prev节点以及修改当前节点的前置节点的next节点指向自己
-- 通过CAS讲tail重新指向新的尾部节点
+- 通过CAS将tail重新指向新的尾部节点
 
 ![节点添加到同步队列](https://segmentfault.com/img/remote/1460000017372072?w=648&h=228)
 
